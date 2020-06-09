@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>秒杀</title>
+	<link href="css/timeTo.css" type="text/css" rel="stylesheet"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet"/>
+	<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+	<script src="js/jquery.time-to.min.js"></script>
+</head>
+
+<body>
+	<div id="box">
+		<img class="ms_pic"  src="./img/huawei.jpg" />
+	</div>
+	
+	<div  class="countdown" id="countdown"></div>
+</body>
+
+<script>
+tt=5
+
+if(tt<0){
+    tt='stop';
+}
+
+
+$('#countdown').timeTo(tt,function(){
+    $('#box').append('<img class="ms_start"  src="./img/start.jpg" />');
+});
+</script>
+</html>
